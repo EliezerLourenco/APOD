@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+<?stylesheet style.css?>
+
+<ScrollPane fitToWidth="true" pannable="true" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.apod.Controller">
+    <VBox spacing="10" alignment="TOP_CENTER">
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+        </padding>
+        <children>
+            <Label text="NASA Space Image Viewer" style="-fx-font-weight: bold; -fx-font-size: 24;" />
+            <Label text="View the cosmos through NASA's Astronomy Picture of the Day (APOD)." wrapText="true" maxWidth="600" />
+            <Label text="Select a date to view images from the past, or view today's featured space image." wrapText="true" maxWidth="600" />
+            <DatePicker fx:id="datePicker" />
+            <Button text="Get Image For Date" onAction="#handleGetImageForDate" maxWidth="200" />
+            <Button fx:id="getApodButton" text="Get Today's APOD" onAction="#getTodaysApod" maxWidth="200" />
+            <ImageView fx:id="imageView" fitWidth="600" preserveRatio="true" pickOnBounds="true"/>
+            <VBox spacing="5" maxWidth="600">
+                <Label fx:id="titleLabel" style="-fx-font-weight: bold; -fx-font-size: 18; -fx-text-alignment: center;" wrapText="true" />
+                <Label fx:id="explanationLabel" style="-fx-text-alignment: center;" wrapText="true" />
+            </VBox>
+        </children>
+    </VBox>
+</ScrollPane>

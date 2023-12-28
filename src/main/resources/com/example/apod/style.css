@@ -1,0 +1,17 @@
+.root {
+    -fx-font-family: 'Arial';
+    -fx-base: #FFFFFF;
+}
+
+.button {
+    -fx-background-color: #67B7D1;
+    -fx-text-fill: #FFFFFF;
+}
+
+.label {
+    -fx-text-fill: #333333;
+}
+
+.date-picker {
+    -fx-background-color: #FFFFFF;
+}
